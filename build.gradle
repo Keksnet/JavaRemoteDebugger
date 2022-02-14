@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'application'
+}
+
+application.mainClass = 'de.neo.remotedebugger.LauncherKt'
+
+shadowJar {
+    mainClasses {
+        'de.neo.remotedebugger.LauncherKt'
+    }
+}
+
+group = 'de.neo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
